@@ -1,8 +1,8 @@
 class Doller:
-    amount = 10
+    amount = 0
 
     def __init__(self, amount):
         pass
 
     def times(self, multiplier):
-        pass
+        self.amount = 5 * 2
