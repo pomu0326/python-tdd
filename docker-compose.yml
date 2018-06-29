@@ -1,0 +1,8 @@
+version: "2.1"
+
+services:
+  tdd:
+    image: python:3
+    volumes:
+      - .:/usr/src
+    working_dir: /usr/src
