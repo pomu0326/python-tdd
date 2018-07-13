@@ -15,8 +15,11 @@ python ./testmoney.py
 
 ## TODO
 
+**課題**
 - $5 + 10CHF = $10(レートが2:1の場合)
-- $5 * 2 = $10
-- amountをprivateにする
-- Dollerの副作用をどうするか
 - moneyの丸め処理をどうするか
+- amountをprivateにする
+
+**完了**
+- Dollerの副作用をどうするか
+- $5 * 2 = $10
