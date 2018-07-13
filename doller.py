@@ -8,4 +8,5 @@ class Doller:
         return Doller(self.amount * multiplier)
 
     def equals(self, object):
-        return True
+        return self.amount == object.amount
+
