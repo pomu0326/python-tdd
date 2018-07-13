@@ -9,6 +9,9 @@ class TestMoney(unittest.TestCase):
         product = five.times(3)
         self.assertEqual(15, product.amount)
 
+    def test_equality(self):
+        self.assertTrue(Doller(5).equals(Doller(5)))
+
 if __name__ == "__main__":
     unittest.main()
 

@@ -19,6 +19,8 @@ python ./testmoney.py
 - $5 + 10CHF = $10(レートが2:1の場合)
 - moneyの丸め処理をどうするか
 - amountをprivateにする
+- equalsメソッドを追加する
+- hashCodeメソッドを追加する
 
 **完了**
 - Dollerの副作用をどうするか
