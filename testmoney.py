@@ -4,10 +4,8 @@ from doller import Doller
 class TestMoney(unittest.TestCase):
     def test_multiplication(self):
         five = Doller(5)
-        product = five.times(2)
-        self.assertEqual(10, product.amount)
-        product = five.times(3)
-        self.assertEqual(15, product.amount)
+        self.assertEqual(Doller(10), five.times(2))
+        self.assertEqual(Doller(15), five.times(3))
 
     def test_equality(self):
         self.assertTrue(Doller(5).equals(Doller(5)))
