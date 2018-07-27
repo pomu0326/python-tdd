@@ -18,10 +18,12 @@ python ./testmoney.py
 **課題**
 - $5 + 10CHF = $10(レートが2:1の場合)
 - moneyの丸め処理をどうするか
-- amountをprivateにする
-- equalsメソッドを追加する
 - hashCodeメソッドを追加する
+- nullとの等価性比較
+- 他のオブジェクトとの等価性比較
 
 **完了**
 - Dollerの副作用をどうするか
 - $5 * 2 = $10
+- amountをprivateにする
+- equalsメソッドを追加する
