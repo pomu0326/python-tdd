@@ -5,7 +5,7 @@ class Doller(Money):
     def __init__(self, amount):
         super().__init__(amount)
 
-    def times(self, multiplier):
+    def times(self, multiplier) -> Money:
         return Doller(self._amount * multiplier)
 
     def __eq__(self, other):

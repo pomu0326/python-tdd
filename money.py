@@ -1,3 +1,5 @@
+from doller import Doller
+
 class Money:
     def __init__(self, amount):
         self._amount = amount
@@ -8,3 +10,6 @@ class Money:
         if not type(self) == type(object):
             return False
         return self._amount == object._amount
+
+    def doller(amount):
+        return Doller(amount)
