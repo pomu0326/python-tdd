@@ -5,4 +5,6 @@ class Money:
     def equals(self, object):
         if not isinstance(object, Money):
             return False
+        if not type(self) == type(object):
+            return False
         return self._amount == object._amount
