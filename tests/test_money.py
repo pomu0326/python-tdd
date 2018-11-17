@@ -18,6 +18,7 @@ class TestMoney(unittest.TestCase):
         self.assertFalse(Doller(5).equals(Doller(6)))
         self.assertTrue(Franc(5).equals(Franc(5)))
         self.assertFalse(Franc(5).equals(Franc(6)))
+        # self.assertFalse(Franc(5).equals(Doller(5)))
 
 if __name__ == "__main__":
     unittest.main()

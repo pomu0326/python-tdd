@@ -1,4 +1,6 @@
-class Doller:
+from money import Money
+
+class Doller(Money):
     __amount = 0
 
     def __init__(self, amount):
