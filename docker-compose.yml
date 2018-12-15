@@ -5,4 +5,5 @@ services:
     image: python:3
     volumes:
       - .:/usr/src
+      - ~/.gitconfig:/root/.gitconfig
     working_dir: /usr/src
