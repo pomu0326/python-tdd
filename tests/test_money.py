@@ -1,5 +1,5 @@
 import unittest
-from money import Money
+from money import Money, Bank, Expression
 
 class TestMoney(unittest.TestCase):
     def test_multiplication(self):
@@ -17,8 +17,12 @@ class TestMoney(unittest.TestCase):
         self.assertEqual("CHF", Money.franc(1).currency())
 
     def test_simple_addition(self):
-        sum = Money.doller(5).plus(Money.doller(5))
+        five = Money.doller(5)
+        sum:Expression = five.plus(five)
         self.assertEqual(Money.doller(10), sum)
+        bank = Bank()
+        reduced = bank.reduce(sum, 'USD')
+        self.assertEqual(Money.doller(10), reduced)
 
 if __name__ == "__main__":
     unittest.main()

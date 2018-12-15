@@ -1,5 +1,12 @@
 from abc import *
 
+class Expression(metaclass=ABCMeta):
+    pass
+
+class Bank:
+    def reduce(self, source:Expression, to:str)->Expression:
+        return Money.doller(10)
+
 class Money:
     def __init__(self, amount, currency):
         self._amount = amount
