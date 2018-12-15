@@ -1,10 +1,11 @@
 from abc import *
 
 class Expression(metaclass=ABCMeta):
-    pass
+    @abstractmethod
+    def reduce(self, to): pass
 
 class Bank:
-    def reduce(self, source, to)->Expression:
+    def reduce(self, source, to):
         return source.reduce(to)
 
 
@@ -13,12 +14,12 @@ class Sum(Expression):
         self.augend = augend
         self.addend = addend
 
-    def reduce(self, to)->Expression:
+    def reduce(self, to):
         amount = self.augend._amount + self.addend._amount
         return Money(amount, to)
 
 
-class Money:
+class Money(Expression):
     def __init__(self, amount, currency):
         self._amount = amount
         self._currency = currency
@@ -38,6 +39,9 @@ class Money:
             return False
         return self._amount == object._amount \
                and self._currency == object._currency
+
+    def reduce(self, to):
+        return self
 
     def doller(amount):
         return Money(amount, "USD")
