@@ -3,7 +3,7 @@ TDD本をPythonで写経する
 
 ## 前回まで
 
-第9章完了。
+第10章完了。
 
 ## 環境の立ち上げ方
 
@@ -14,7 +14,7 @@ docker-compose run --rm tdd bash
 ## テストの実行方法
 
 ```bash
-python ./testmoney.py
+make test
 ```
 
 ## TODO
