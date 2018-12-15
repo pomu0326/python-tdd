@@ -29,11 +29,3 @@ class Money:
     def __eq__(self, other):
         return self.equals(other)
 
-
-class Franc(Money):
-
-    def __init__(self, amount, currency):
-        super().__init__(amount, currency)
-
-    def __eq__(self, other):
-        return self.equals(other)
