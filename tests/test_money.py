@@ -1,5 +1,5 @@
 import unittest
-from money import Money, Doller, Franc
+from money import Money, Franc
 
 class TestMoney(unittest.TestCase):
     def test_multiplication(self):
