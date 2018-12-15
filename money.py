@@ -4,13 +4,19 @@ class Expression(metaclass=ABCMeta):
     pass
 
 class Bank:
-    def reduce(self, source:Expression, to:str)->Expression:
-        return Money.doller(10)
+    def reduce(self, source, to)->Expression:
+        return source.reduce(to)
+
 
 class Sum(Expression):
     def __init__(self, augend, addend):
         self.augend = augend
         self.addend = addend
+
+    def reduce(self, to)->Expression:
+        amount = self.augend._amount + self.addend._amount
+        return Money(amount, to)
+
 
 class Money:
     def __init__(self, amount, currency):

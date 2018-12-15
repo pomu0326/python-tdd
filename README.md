@@ -23,3 +23,4 @@ make test
 - $5 + 10CHF = $10 (レートが2:1の場合)
 - $5 + $5 = $10
 - $5 + $5がMoneyを返す
+- Bank.reduce(Money)

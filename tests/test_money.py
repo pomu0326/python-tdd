@@ -19,7 +19,6 @@ class TestMoney(unittest.TestCase):
     def test_simple_addition(self):
         five = Money.doller(5)
         sum:Expression = five.plus(five)
-        self.assertEqual(Money.doller(10), sum)
         bank = Bank()
         reduced = bank.reduce(sum, 'USD')
         self.assertEqual(Money.doller(10), reduced)
@@ -30,6 +29,13 @@ class TestMoney(unittest.TestCase):
         self.assertIsInstance(sum, Sum)
         self.assertEqual(five, sum.augend)
         self.assertEqual(five, sum.addend)
+
+    def test_reduce_sum(self):
+        sum = Sum(Money.doller(3), Money.doller(4))
+        self.assertIsInstance(sum, Expression)
+        bank = Bank()
+        result = bank.reduce(sum, "USD")
+        self.assertEqual(Money.doller(7), result)
 
 if __name__ == "__main__":
     unittest.main()
