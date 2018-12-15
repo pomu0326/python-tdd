@@ -17,15 +17,17 @@ class Money:
         return self._amount == object._amount \
                and self._currency == object._currency
 
-
     def doller(amount):
-        return Doller(amount, "USD")
+        return Money(amount, "USD")
 
     def franc(amount):
-        return Franc(amount, "CHF")
+        return Money(amount, "CHF")
 
     def __repr__(self):
         return "{} {}".format(self._amount, self._currency)
+
+    def __eq__(self, other):
+        return self.equals(other)
 
 class Doller(Money):
 
