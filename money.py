@@ -7,6 +7,11 @@ class Bank:
     def reduce(self, source:Expression, to:str)->Expression:
         return Money.doller(10)
 
+class Sum(Expression):
+    def __init__(self, augend, addend):
+        self.augend = augend
+        self.addend = addend
+
 class Money:
     def __init__(self, amount, currency):
         self._amount = amount
@@ -16,7 +21,8 @@ class Money:
         return Money(self._amount * multiplier, self._currency)
 
     def plus(self, addend):
-        return Money(self._amount + addend._amount, self._currency)
+        # return Money(self._amount + addend._amount, self._currency)
+        return Sum(self, addend)
 
     def currency(self) -> str:
         return self._currency
